@@ -52,8 +52,6 @@ def _space(us):
   utime.sleep_us(us)
 
 
-enable_ir_receiver(16)
-enable_ir_transmitter(17)
 
 def fileExist(fileName):
 	try:
@@ -152,6 +150,8 @@ def send_ir ( buffer ):
 		_space(buffer[i][1])
 	#send a raw bufffer , example , send_ir(ir_recv_buffer)
 		
+enable_ir_receiver(16)
+enable_ir_transmitter(17)
 
 learnIR("motherfucker", overwrite = True)
 sendIR('motherfucker')
